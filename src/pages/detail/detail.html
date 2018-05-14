@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Detail</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <section class="post">
+        <div class="post-Title">
+            <a>{{ getRando().getName() }}</a>
+        </div>
+
+        <article class="post-content">
+            <div ion-item *ngFor="let item of getRando().getPoints()">
+                {{ item.getName() }} ({{ item.getLatitude() }}, {{ item.getLongitude() }})
+            </div>
+        </article>
+    </section>
+
+</ion-content>

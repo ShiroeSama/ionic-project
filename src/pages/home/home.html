@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Homepage</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <section class="post">
+        <div class="post-Title">
+            <a>Mes Randonnées</a>
+        </div>
+
+        <div class="post-content">
+            <button ion-item *ngFor="let item of getRandos()" (click)="detail($event, item)">
+                {{item.getName()}}
+            </button>
+        </div>
+    </section>
+
+</ion-content>
