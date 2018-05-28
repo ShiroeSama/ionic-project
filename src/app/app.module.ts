@@ -8,6 +8,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 
+// Components
+import { MapComponent } from '../component/map/map.component';
+
 // Native Components
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,8 +18,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+
+    // Controllers
     HomePage,
-    DetailPage
+    DetailPage,
+
+    // Components
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +33,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
+    // Controllers
     HomePage,
-    DetailPage
+    DetailPage,
+
+    // Components
+    MapComponent
   ],
   providers: [
     StatusBar,

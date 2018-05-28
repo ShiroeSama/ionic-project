@@ -14,7 +14,6 @@ import { RandoRepository } from '../../repository/Rando/RandoRepository';
 declare var google;
 
 @Component({
-  selector: 'home',
   templateUrl: 'home.html'
 })
 export class HomePage {

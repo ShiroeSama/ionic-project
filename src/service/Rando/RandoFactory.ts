@@ -11,8 +11,8 @@ export class RandoFactory {
         var point_1 = new Point();
         point_1
             .setName('Start')
-            .setLatitude(0)
-            .setLongitude(0)
+            .setLatitude(30)
+            .setLongitude(55)
         ;
 
         var point_2 = new Point();
