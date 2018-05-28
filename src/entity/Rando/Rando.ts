@@ -11,25 +11,6 @@ export class Rando {
         this.points = [];
     }
 
-    initialized() {
-        var start = new Point();
-        start
-            .setName('Start')
-            .setLatitude(0)
-            .setLongitude(0)
-        ;
-
-        var end = new Point();
-        end
-            .setName('End')
-            .setLatitude(1)
-            .setLongitude(1)
-        ;
-
-        this.points.push(start);
-        this.points.push(end);
-    }
-
     // ----------------
     // Name
 

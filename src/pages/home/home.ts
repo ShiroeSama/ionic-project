@@ -1,45 +1,78 @@
-import { Component } from '@angular/core'
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 // Controller
 import { DetailPage } from '../detail/detail';
 
-// Model
-import { Rando } from '../../model/Rando/Rando';
+// Entity
+import { Rando } from '../../entity/Rando/Rando';
 
-// Services
-import { RandoFactory } from '../../service/Rando/RandoFactory';
+// Repository
+import { RandoRepository } from '../../repository/Rando/RandoRepository';
 
-// --------------------------------
-// Controller : Home
+declare var google;
 
 @Component({
-    selector: 'home',
-    templateUrl: 'home.html'
+  selector: 'home',
+  templateUrl: 'home.html'
 })
 export class HomePage {
-    private randos: Array<Rando>;
+  protected repository: RandoRepository;
+  protected randos: Array<Rando>;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
-        this.randos = [];
-        this.initialized();
-    }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.repository = new RandoRepository();
+    this.randos = this.repository.findAll();
+  }
 
-    initialized() {
-        var rando_1 = RandoFactory.generate('Rando 1');
-        var rando_2 = RandoFactory.generate('Rando 2');
+  getRandos(): Array<Rando> {
+    return this.randos;
+  }
 
-        this.randos.push(rando_1);
-        this.randos.push(rando_2);
-    }
+  detail(event, item:Rando) {
+    this.navCtrl.push(DetailPage, {
+      rando: item
+    });
+  }
 
-    getRandos(): Array<Rando> {
-        return this.randos;
-    }
 
-    detail(event, item:Rando) {
-        this.navCtrl.push(DetailPage, {
-            rando: item
-        });
-    }
+  /*
+  ionViewDidLoad(){
+  this.loadMap();
+}
+
+loadMap(){
+this.geolocation.getCurrentPosition().then((position) => {
+let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+let mapOptions = {
+center: latLng,
+zoom: 15,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+}
+this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+}, (err) => {
+console.log(err);
+});
+}
+
+addMarker(){
+let marker = new google.maps.Marker({
+map: this.map,
+animation: google.maps.Animation.DROP,
+position: this.map.getCenter()
+});
+let content = "<h4>Information!</h4>";
+this.addInfoWindow(marker, content);
+}
+
+addInfoWindow(marker, content){
+let infoWindow = new google.maps.InfoWindow({
+content: content
+});
+google.maps.event.addListener(marker, 'click', () => {
+infoWindow.open(this.map, marker);
+});
+}
+*/
 }

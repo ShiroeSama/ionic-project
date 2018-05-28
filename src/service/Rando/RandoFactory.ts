@@ -1,6 +1,6 @@
 // Model
-import { Rando } from '../../model/Rando/Rando';
-import { Point } from '../../model/Point/Point';
+import { Rando } from '../../entity/Rando/Rando';
+import { Point } from '../../entity/Point/Point';
 
 // --------------------------------
 // Service : RandoFactory

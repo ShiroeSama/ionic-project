@@ -1,12 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
-
-import { Platform, MenuController, Nav } from 'ionic-angular';
-
-import { HomePage } from '../pages/home/home';
-
+import { Component, ViewChild} from '@angular/core';
+import { Platform, MenuController, Nav  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// Controller
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +12,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // make HelloIonicPage the root (or first) page
   rootPage = HomePage;
   pages: Array<{title: string, component: any}>;
 
@@ -23,10 +20,9 @@ export class MyApp {
     public menu: MenuController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen
+
   ) {
     this.initializeApp();
-
-    // set our app's pages
     this.pages = [
       { title: 'Homepage', component: HomePage },
     ];

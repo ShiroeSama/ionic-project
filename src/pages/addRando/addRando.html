@@ -12,20 +12,6 @@
   </ion-navbar>
 </ion-header>
 
-<!--ion-content>
+<ion-content>
   <div #map id="map"></div>
-</ion-content-->
-
-<ion-content padding>
-
-    <section>
-        <div>Mes Randonnées</div>
-
-        <div>
-            <button ion-item *ngFor="let item of getRandos()" (click)="detail($event, item)">
-                {{item.getName()}}
-            </button>
-        </div>
-    </section>
-
 </ion-content>
