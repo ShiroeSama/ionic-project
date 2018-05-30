@@ -32,7 +32,7 @@ export class MapComponent {
       this.rando.getPoints().forEach((point) => {
         let position = new google.maps.LatLng(
           point.getLatitude(),
-          point.getLatitude()
+          point.getLongitude()
         );
 
         trace.push(position);

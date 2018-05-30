@@ -4,42 +4,107 @@ import { Point } from '../Point/Point';
 // Model : Rando
 
 export class Rando {
-    private name:string;
-    private points: Array<Point>;
+  private name:string;
+  private locality:string;
+  private description:string;
+  private time:string;
+  private height_diff:string;
+  private score:string;
 
-    constructor() {
-        this.points = [];
-    }
+  private points: Array<Point>;
 
-    // ----------------
-    // Name
+  constructor() {
+    this.points = [];
+  }
 
-    setName(name:string): Rando {
-        this.name = name;
-        return this;
-    }
+  // ----------------
+  // Name
 
-    getName(): string {
-        return this.name;
-    }
+  setName(name:string): Rando {
+    this.name = name;
+    return this;
+  }
 
-    // ----------------
-    // Point
+  getName(): string {
+    return this.name;
+  }
 
-    setPoint(point:Point): Rando {
-        this.points.push(point);
-        return this;
-    }
+  // ----------------
+  // Adress
 
-    // ----------------
-    // Points
+  setLocality(locality:string): Rando {
+    this.locality = locality;
+    return this;
+  }
 
-    setPoints(points:Array<Point>): Rando {
-        this.points = points;
-        return this;
-    }
+  getLocality(): string {
+    return this.locality;
+  }
 
-    getPoints(): Array<Point> {
-        return this.points;
-    }
+  // ----------------
+  // Description
+
+  setDescription(description:string): Rando {
+    this.description = description;
+    return this;
+  }
+
+  getDescription(): string {
+    return this.description;
+  }
+
+  // ----------------
+  // Time
+
+  setTime(time:string): Rando {
+    this.time = time;
+    return this;
+  }
+
+  getTime(): string {
+    return this.time;
+  }
+
+  // ----------------
+  // Height_diff
+
+  setHeightDiff(height_diff:string): Rando {
+    this.height_diff = height_diff;
+    return this;
+  }
+
+  getHeightDiff(): string {
+    return this.height_diff;
+  }
+  // ----------------
+  // Score
+
+  setScore(score:string): Rando {
+    this.score = score;
+    return this;
+  }
+
+  getScore(): string {
+    return this.score;
+  }
+
+  // ----------------
+  // Point
+
+  setPoint(point:Point): Rando {
+    this.points.push(point);
+    return this;
+  }
+
+  // ----------------
+  // Points
+
+  setPoints(points:Array<Point>): Rando {
+    this.points = points;
+    return this;
+  }
+
+  getPoints(): Array<Point> {
+    return this.points;
+  }
 }

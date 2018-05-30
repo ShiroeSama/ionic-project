@@ -1,5 +1,95 @@
-
 .ios, .md {
+  .my_title{
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 700;
+    color: #33691e;
+  }
+  .toolbar-title-md{
+    color: #fff;
+  }
+  .bar-button-default-md{
+    color: #fff;
+  }
+  .toolbar-background {
+    background-color: #689f38;
+  }
+  .button_item{
+    background-color: #fff;
+  }
+  .content-md{
+    background-color: #fff;
+  }
+  .picture_div{
+    /*border: 1px solid red;*/
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+  }
+  .resum_div{
+    width: 100%;
+    float: left;
+  }
+  .name_div{
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    background-color: #8bc34a;
+    color: #fff;
+  }
+  .locality_div{
+    font-size: 0.90em;
+    margin-left:10px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    color: #33691e;
+    font-weight: 700;
+  }
+  .time_div{
+    float: left;
+    padding-top: 32px;
+    font-size: 0.90em;
+    color: #33691e;
+    font-weight: 700;
+  }
+  .height_diff_div{
+    float: right;
+    padding-top: 32px;
+    font-size: 0.90em;
+    color: #33691e;
+    font-weight: 700;
+  }
+  .my_icon{
+
+  }
+  .description_elem{
+    margin-top: -10px;
+    margin-bottom: -22px;
+    background: transparent;
+    float: left;
+  }
+  .begin_desc{
+    float: left;
+    margin-bottom: -20px;
+    color: #33691e;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+  .content_desc{
+    color: #33691e;
+    font-style: italic;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .ending_desc{
+    color: #33691e;
+    font-weight: 700;
+    font-size: 1.8em;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+  }
   home {
     .scroll {
       height: 100%

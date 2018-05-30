@@ -11,14 +11,19 @@
 <ion-content padding>
 
     <section class="post">
-        <div class="post-Title">
-            <a>{{ getRando().getName() }}</a>
-        </div>
-
         <article class="post-content">
-            <div ion-item *ngFor="let item of getRando().getPoints()">
+          <div class="my_picture"></div>
+          <div class="name_item">{{ getRando().getName() }}</div>
+          <div class="rate"></div>
+          <div ion-item *ngFor="let item of getRando().getPoints()">
                 {{ item.getName() }} ({{ item.getLatitude() }}, {{ item.getLongitude() }})
-            </div>
+          </div>
+          <div class="locality_div"><ion-icon class="my_icon" name="pin"></ion-icon> {{getRando().getLocality()}}</div>
+          <div class="time_div"><ion-icon class="my_icon" name="timer"></ion-icon> {{getRando().getTime()}}</div>
+          <div class="height_diff_div"><ion-icon class="my_icon" name="trending-up"></ion-icon> {{getRando().getHeightDiff()}}</div>
+          <ion-item class="description_elem" text-wrap>
+          <p class="begin_desc">"</p><p class="content_desc">{{getRando().getDescription()}}</p><p class="ending_desc">"</p>
+          </ion-item>
         </article>
     </section>
 

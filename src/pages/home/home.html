@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar >
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title> HOME MAP </ion-title>
+    <ion-title class="my_header_title"> HOME MAP </ion-title>
 
     <!--ion-buttons end>
       <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
@@ -19,11 +19,24 @@
 <ion-content padding>
 
     <section>
-        <div>Mes Randonnées</div>
-
+        <div class="my_title"><ion-icon name="walk"></ion-icon> Mes Randonnées</div>
         <div>
-            <button ion-item *ngFor="let item of getRandos()" (click)="detail($event, item)">
-                {{item.getName()}}
+            <button class="button_item" ion-item *ngFor="let item of getRandos()" (click)="detail($event, item)">
+                <!--PICTURE-->
+                <div class="picture_div"></div>
+                <!--RESUM-->
+                <div class="resum_div">
+                  <div class="name_div">{{item.getName()}}</div>
+                  <div class="locality_div"><ion-icon class="my_icon" name="pin"></ion-icon> {{item.getLocality()}}</div>
+                  <ion-item class="description_elem" text-wrap>
+                  <p class="begin_desc">"</p><p class="content_desc">{{item.getDescription()}}</p><p class="ending_desc">"</p>
+                  </ion-item>
+                  <div class="time_div"><ion-icon class="my_icon" name="timer"></ion-icon> {{item.getTime()}}</div>
+                  <div class="height_diff_div"><ion-icon class="my_icon" name="trending-up"></ion-icon> {{item.getHeightDiff()}}</div>
+                  <!--RATING-->
+                  <div class=""></div>
+                </div>
+
             </button>
         </div>
     </section>
