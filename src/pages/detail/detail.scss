@@ -1,11 +1,73 @@
 .ios, .md {
+  .scroll-content{
+    padding: 0px !important;
+  }
+  .name_item{
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    background-color: #689f38;
+    padding: 5px 0px;
+  }
+  .locality_item{
+    font-size: 1.1em;
+    float: left;
+    color: #33691e;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .time_item{
+    font-size: 1.1em;
+    float: left;
+    color: #33691e;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .height_diff_item{
+    font-size: 1.1em;
+    float: left;
+    color: #33691e;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  .icon_detail{
+    margin-left: 20%;
+    margin-right: 20px;
+  }
+  .description_item{
+    background-color: #689f38;
+    color: #fff;
+  }
+  .begin_desc_elem{
+    float: left;
+    margin-bottom: -20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+  .ending_desc_elem{
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.8em;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+  }
+  .content_desc_elem{
+    color: #fff;
+    font-style: italic;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .start_button{
+    text-align: center;
+    padding: 5px 0px;
+  }
   detail {
     .scroll {
       height: 100%
     }
-    #map {
-      width: 100%;
-      height: 100%;
-     }
-   }
+  }
 }

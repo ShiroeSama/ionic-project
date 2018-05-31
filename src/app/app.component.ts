@@ -24,7 +24,7 @@ export class MyApp {
   ) {
     this.initializeApp();
     this.pages = [
-      { title: 'Homepage', component: HomePage },
+      { title: 'ACCUEIL', component: HomePage },
     ];
   }
 
