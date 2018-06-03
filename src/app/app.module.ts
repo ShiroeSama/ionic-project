@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 
 // Controller
 import { HomePage } from '../pages/home/home';
+import { ListRando } from '../pages/listRando/listRando';
 import { DetailPage } from '../pages/detail/detail';
 
 // Components
@@ -21,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     // Controllers
     HomePage,
+    ListRando,
     DetailPage,
 
     // Components
@@ -36,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     // Controllers
     HomePage,
+    ListRando,
     DetailPage,
 
     // Components

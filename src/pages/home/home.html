@@ -1,32 +1,12 @@
-<ion-header>
-  <ion-navbar >
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title class="my_header_title"> ACCEUIL </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-    <section>
-        <div class="my_title"><ion-icon name="walk"></ion-icon> Mes Randonnées</div>
-        <div>
-            <button class="button_item" ion-item *ngFor="let item of getRandos()" (click)="detail($event, item)">
-                <!--PICTURE-->
-                <div class="picture_div"></div>
-                <!--RESUM-->
-                <div class="resum_div">
-                  <div class="name_div">{{item.getName()}}</div>
-                  <div class="locality_div"><ion-icon class="my_icon" name="pin"></ion-icon> {{item.getLocality()}}</div>
-                  <div class="description_elem " text-wrap>
-                    <p class="begin_desc">"</p><p class="content_desc">{{item.getDescription()}}</p><p class="ending_desc">"</p>
-                  </div>
-                  <div class="time_div"><ion-icon class="my_icon" name="time"></ion-icon> {{item.getTime()}}</div>
-                  <div class="height_diff_div"><ion-icon class="my_icon" name="trending-up"></ion-icon> {{item.getHeightDiff()}}</div>
-                  <!--RATING-->
-                  <div class=""></div>
-                </div>
-            </button>
-        </div>
-    </section>
-
+<ion-content class="content_login">
+  <div class="title_login"> RANDO APP </div>
+  <ion-list class="content_login">
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button class="button_login" ion-button full (click)="logIn()">LOG IN</button>
 </ion-content>

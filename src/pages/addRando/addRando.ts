@@ -5,8 +5,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 declare var google;
 
 @Component({
-  selector: 'home',
-  templateUrl: 'home.html'
+  selector: 'addRando',
+  templateUrl: 'addRando.html'
 })
 export class HomePage {
 
