@@ -11,6 +11,7 @@ import { DetailPage } from '../pages/detail/detail';
 
 // Components
 import { MapComponent } from '../component/map/map.component';
+import { TimerComponent } from '../component/timer/timer.component';
 
 // Native Components
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DetailPage,
 
     // Components
-    MapComponent
+    MapComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DetailPage,
 
     // Components
-    MapComponent
+    MapComponent,
+    TimerComponent
   ],
   providers: [
     StatusBar,

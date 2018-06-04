@@ -7,7 +7,7 @@ import { Rando } from '../../entity/Rando/Rando';
 
 // Component
 import { MapComponent } from '../../component/map/map.component';
-
+import { TimerComponent } from '../../component/timer/timer.component';
 // Constant
 declare var google;
 
@@ -18,6 +18,7 @@ declare var google;
 })
 export class DetailPage {
   private rando: Rando;
+  public timer: TimerComponent;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.rando = navParams.get('rando');
@@ -25,5 +26,12 @@ export class DetailPage {
 
   getRando(): Rando {
     return this.rando;
+  }
+
+  ngOnInit() {
+    var my_timer = this.timer;
+    setTimeout(() => {
+      my_timer.startTimer();
+    }, 1000)
   }
 }

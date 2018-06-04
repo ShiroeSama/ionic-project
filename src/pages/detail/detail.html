@@ -21,10 +21,6 @@
     <p class="begin_desc_elem">"</p><p class="content_desc_elem">{{getRando().getDescription()}}</p><p class="ending_desc_elem">"</p>
   </ion-item>
   <Map [rando]="getRando()"></Map>
-  <div class="start_button">
-    <button ion-button icon-start color="green_perso">
-      <ion-icon name="timer"></ion-icon>
-      START
-    </button>
-  </div>
+  
+  <timer #timer timeInSeconds="60"></timer>
 </ion-content>
